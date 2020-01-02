@@ -1212,7 +1212,6 @@ public:
 */
 #endif
 
-#ifndef MASTER_GOLD
 #include "xrAICore/Navigation/game_graph.h"
 struct CCC_JumpToLevel : public IConsole_Command
 {
@@ -1255,7 +1254,6 @@ struct CCC_JumpToLevel : public IConsole_Command
     }
 };
 
-//#ifndef MASTER_GOLD
 class CCC_Script : public IConsole_Command
 {
 public:
@@ -1353,7 +1351,6 @@ public:
     }
 };
 
-#endif // MASTER_GOLD
 
 #include "GamePersistent.h"
 
@@ -2020,14 +2017,12 @@ void CCC_RegisterCommands()
     CMD1(CCC_SetWeather, "set_weather");
 #endif // DEBUG
 
-#ifndef MASTER_GOLD
     CMD1(CCC_JumpToLevel, "jump_to_level");
     CMD3(CCC_Mask, "g_god", &psActorFlags, AF_GODMODE);
     CMD3(CCC_Mask, "g_unlimitedammo", &psActorFlags, AF_UNLIMITEDAMMO);
     CMD1(CCC_Script, "run_script");
     CMD1(CCC_ScriptCommand, "run_string");
     CMD1(CCC_TimeFactor, "time_factor");
-#endif // MASTER_GOLD
 
     CMD3(CCC_Mask, "g_autopickup", &psActorFlags, AF_AUTOPICKUP);
     CMD3(CCC_Mask, "g_dynamic_music", &psActorFlags, AF_DYNAMIC_MUSIC);
